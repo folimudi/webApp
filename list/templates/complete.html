@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Party List Databse</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/styles/colortheme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+        <img src="resources/Letters-with-shield-full-color.png" id="headerImage">
+        <div class="w3-bar w3-theme" id="nav-var">
+            <a href="mainPage.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile">Home</a>
+            <a href="listMain.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile ">List</a>
+            <a href="settings.html" class="w3-bar-item w3-button w3-right w3-large w3-mobile"><span class="glyphicon glyphicon-cog"></span></a>
+        </div>
+    </div>
+  </header>
+
+    <div class="section-pad">
+      <div class="w3-container w3-quarter filter-bar inner-section">
+        <div class="filter-bar-Title">
+          <span >Filters</span>
+        </div>
+
+        <div class="brother-filter">
+          <div class="filter-item-title filter-item-inside-item">
+            <span>Brother</span>
+          </div>
+          <div class="filter-item-search-area">
+            <div class="filter-item-inside-item">
+              <input type="text" name="search-bar" value="" placeholder="Search name..." class="search-bar">
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="w3-container w3-half list-wrapper">
+
+            <div id="mainListContainer" class="list-container">
+
+              <div class="list-container">
+                  <span class="genderLabel">List: </span>
+                  <select type="selectList" id="listSelected" name="tableID">
+                  <option value="guysListTable">Guys</option>
+                  <option value="girlsListTable">Girls</option>
+                  <option value="blacklistTable">Blacklist</option>
+                  <option value="generalTable">General</option>
+                </select>
+              </div>
+
+              <br>
+
+              <input type="text" name="searchbar" value="" placeholder="Search names..." class="search-bar">
+                <table id="mainList" class="list-table">
+                    <thead id="mainListHead">
+                        <tr>
+                            <th class="headCol">First Name</th>
+                            <th class="headCol">Last Name</th>
+                            <th class="headCol">
+                                <div class="centered-selection">
+                                  <span >
+                                    Options
+                                  </span>
+                                </div>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="mainListBody">
+                        <tr>
+                            <td class="nameCol">Juan</td>
+                            <td class="nameCol">Rodriguez</td>
+                            <td class="nameCol selectCol">
+                                <div class=""><span class="glyphicon glyphicon-edit"></span> <span class="fa fa-trash-o"></span> <span class="glyphicon glyphicon-ban-circle"></span> </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Jose</td>
+                            <td class="nameCol">Cagon</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Pepe</td>
+                            <td class="nameCol">Botellas</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Miguel</td>
+                            <td class="nameCol">Pato</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Juan</td>
+                            <td class="nameCol">Rodriguez</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Jose</td>
+                            <td class="nameCol">Cagon</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Pepe</td>
+                            <td class="nameCol">Botellas</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="nameCol">Miguel</td>
+                            <td class="nameCol">Pato</td>
+                            <td class="selectCol"><input type="checkbox" name="selectIndividual"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <br>
+
+                <div id="inputForm">
+                    <form id="addPersonForm">
+                        <input style="display: inline;" label="firstName" type="text" name="firstName" placeholder="First Name" class="w3-input w3-border">
+                        <input style="display: inline;" label="lastName" type="text" name="lastName" placeholder="Last Name" class="w3-input w3-border">
+                        <!--&lt;!&ndash; - Actual list with scroll down-->
+                        <div class="form-item">
+                          <button label="sendButton" id="addButton" type="submit" value="Send"> Add </button>
+                        </div>
+
+                        <!-- - Checkbox next to each name, edit pen-->
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="w3-quarter inner-section w3-container">
+          <div class="filter-bar-Title">
+            <span>Stats</span>
+          </div>
+
+          <div class="filter-item-inside-item w3-half">
+            <p><strong>Guys:</strong> X</p>
+
+          </div>
+          <div class="filter-item-inside-item w3-half">
+            <p><strong>Ratio:</strong> X</p>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <script id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
+        //]]>
+    </script>
+</body>
+
+</html>
