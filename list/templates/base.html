@@ -3,20 +3,35 @@
 
 <head>
     <title>Party List Databse</title>
-    <link rel="stylesheet" href="/resources/css/{{site}}.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Static CSS files -->
+    {% load static %}
+    {% with "css/"|add:site|add:".css" as stylePath%}
+    <link rel="stylesheet" href="{% static stylePath %}">
+    {%endwith%}
+    <link rel="stylesheet" href="{% static "css/colortheme.css" %}">
+    <link rel="stylesheet" href="{% static "css/header.css" %}">
+
+    <!-- External stylesheets -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/resources/css/colortheme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+  {%block body-main%}
   <header>
+    <!-- <img src="{% static "images/shield-letters.png" %}" id="headerImage"> -->
     <div class="header-container">
-        <img src="resources/Letters-with-shield-full-color.png" id="headerImage">
+        <img src="{% static "images/shield-letters.png" %}" id="headerImage">
+        <a href="settings.html" id="logoutButton"><span class="glyphicon glyphicon-log-out"></span></a>
+        {%block navbar%}
         <div class="w3-bar w3-theme" id="nav-var">
             <a href="mainPage.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile">Home</a>
             <a href="listMain.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile ">List</a>
@@ -26,11 +41,13 @@
             {% endif %}
             <a href="settings.html" class="w3-bar-item w3-button w3-right w3-large w3-mobile"><span class="glyphicon glyphicon-cog"></span></a>
         </div>
+        {%endblock%}
 
         <!-- {% block navBar %}
         Not in use for now
         {% endblock %} -->
     </div>
+
   </header>
 
     <div class="section-pad">
@@ -46,6 +63,7 @@
 
       {% endblock %}
     </div>
+    {% endblock %}
 </body>
 
 </html>
