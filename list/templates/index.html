@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block navbar%}
+</div>
+{%endblock%}
+{%block body-1%}
+  <h1>Party List Database</h1>
+
+<div id="form">
+  <h3>Please log in</h3>
+	<form action="login.php">
+
+		<label for="brotherID">Brother ID</label>
+    <br>
+		<input type="text" id="brotherID" name="brotherID">
+		<br>
+
+		<label for="password">Password</label>
+    <br>
+		<input type="password" id="password" name="brotherpass">
+    <p font-size="10px"> <a href = "forgot_pass.html">Forgot username or passoword?</a></p>
+
+    <br><br>
+
+    <button type="submit" formmethod="post">Login</button>
+
+	</form>
+
+</div>
+{%endblock%}

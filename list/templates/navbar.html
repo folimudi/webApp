@@ -1,0 +1,9 @@
+<div class="w3-bar w3-theme" id="nav-var">
+    <a href="mainPage.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile">Home</a>
+    <a href="listMain.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile ">List</a>
+    <!-- Check if user is authorized to see admin page and add option to nav bar -->
+    {% if userIsAdmin %}
+      <a href="listMain.html" class="nav-bar w3-bar-item w3-button w3-large w3-mobile ">Admin</a>
+    {% endif %}
+    <a href="settings.html" class="w3-bar-item w3-button w3-right w3-large w3-mobile"><span class="glyphicon glyphicon-cog"></span></a>
+</div>

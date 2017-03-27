@@ -1,0 +1,23 @@
+.header-container{
+  background-color: #ebebeb;
+  /*margin: auto;*/
+  position: relative;
+  padding-top: 10px;
+}
+.header-container img{
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin: auto;
+}
+
+#logoutButton{
+  position:absolute;
+  right: 15px;
+  top: 10px;
+}
+
+#logoutButton > span{
+  font-size: 20px;
+}
