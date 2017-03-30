@@ -1,0 +1,7 @@
+This is a web application to keep track of a list of guests. Multiple people can add guests.
+
+The backend of the application runs in Django as a RESTfull API.
+
+The frontend is built using AngularJS 2. 
+
+
