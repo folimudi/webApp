@@ -13,7 +13,7 @@ class Brother(models.Model):
 	brother_id = models.CharField(max_length = 30, primary_key=True)
 	first_n = models.CharField(max_length = 20)
 	last_n = models.CharField(max_length = 20)
-	status = models.CharField(max_length = 1, choices= STATUS, required = False)
+	status = models.CharField(max_length = 1, choices= STATUS, blank = True)
 	def __str__ (self):
 		output = self.first_n + " " + self.last_n
 		return output
@@ -28,7 +28,7 @@ class Guest(models.Model):
 	first_n = models.CharField(max_length = 30)
 	last_n = models.CharField(max_length= 30)
 	gender = models.CharField(max_length=1, choices=GENDER)
-	blacklisted = models.BooleanField(default=False, required = False)
+	blacklisted = models.BooleanField(default=False, blank = True)
 	host = models.ManyToManyField(Brother)
 	def __str__ (self):
 		return self.first_n + " " + self.last_n

@@ -13,7 +13,7 @@ class BrotherSerializer(serializers.ModelSerializer):
         instance.brother_id = validated_data.get('brother_id', instance.brother_id)
         instance.first_n = validated_data.get('first_n', instance.first_n)
         instance.last_n = validated_data.get('last_n', instance.last_n)
-        instance.status = validated_data.get('status', instance.status)
+        instance.status = validated_data.get('status', instance.status, required = False)
         instance.save()
         return instance
 
