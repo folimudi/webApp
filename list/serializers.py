@@ -22,6 +22,7 @@ class GuestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Guest
         fields = ('first_n', 'last_n', 'gender','blacklisted' , 'host')
+
     def create(self, validated_data):
         return Guest.object.create(**validated_data)
 
