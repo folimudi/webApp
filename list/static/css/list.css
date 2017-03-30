@@ -40,10 +40,27 @@ button{
 }
 
 
+.filter-bar-Title{
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filter-item-title{
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 1px solid lightgray;
+  padding: 5px 0 0 0;
+}
+
+.filter-item-inside-item{
+  margin: 0 4px;
+}
+
 .section-title{
   border-bottom: 2px solid gray;
 }
-
 
 
 .inner-section{

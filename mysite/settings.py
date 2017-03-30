@@ -26,7 +26,7 @@ SECRET_KEY = 'r8gahs**c!(qt)je1%)2h9--rwx5&x+61)&e^r#e-xj1s2%3h)'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost", "192.168.1.50", "jupynotebook.hopto.org"
+    "127.0.0.1", "192.168.1.50", "jupynotebook.hopto.org"
 ]
 
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djng'
+    
 ]
 
 MIDDLEWARE = [
